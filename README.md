@@ -1,7 +1,7 @@
 ![example](https://github.com/user-attachments/assets/99362543-589f-439a-ad5d-78a0b9fe18c8)
 
 
-# Cara Perhitungan
+# Contoh Perhitungan
 
 - Turn Count = 10 (peserta menoleh 10X)
 - Nod Count = 5 (peserta menunduk 5x)
