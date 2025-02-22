@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteksi Kecurangan Ujian</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <h1>Deteksi Kecurangan Ujian</h1>
+    <div class="container">
+        <div class="video-container">
+            <img src="{{ url_for('video_feed') }}" alt="Video Feed">
+        </div>
+        <div class="data-container">
+            <p>Turn Count: <span id="turn-count">0</span></p>
+            <p>Nod Count: <span id="nod-count">0</span></p>
+            <p>Cheating Percentage: <span id="cheating-percentage">0</span>%</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.js"></script>
+    <script>
+        const socket = io();
+
+        // Update data dari backend
+        socket.on('update_data', function(data) {
+            document.getElementById('turn-count').textContent = data.turn_count;
+            document.getElementById('nod-count').textContent = data.nod_count;
+            document.getElementById('cheating-percentage').textContent = data.cheating_percentage;
+        });
+    </script>
+</body>
+</html>
