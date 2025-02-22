@@ -19,7 +19,7 @@
 - Total Suspicious Actions= (10 x 1.0 ) + (5 x 1.5) + (2 x 2.0) + (1 x 2.5)
 - Total Suspicious Actions= 10 + 7.5 + 4 + 2.5 = 24
 
-#Hitung Persentase Kecurangan#
+# Hitung Persentase Kecurangan 
 - Cheating Percentage = (24/1200) X 100 = 2%
 
 
